@@ -1,5 +1,5 @@
 function handleProductChange(productId, isPlus) {
-    var productInput = document.getElementById(productId);
+    const productInput = document.getElementById(productId);
     var productNumber = parseFloat(productInput.value);
     let productNewNumber = productNumber;
     if (isPlus == true) {
@@ -9,13 +9,16 @@ function handleProductChange(productId, isPlus) {
         productNewNumber = productNumber - 1;
     }
     productInput.value = productNewNumber;
-
     let productTotal = 0;
     if (productId == 'first-class') {
         productTotal = productNewNumber * 150;
+        setDisplay(productId, 'confirm-first-class-quantity');
+        calculationDisplay('confirm-first-class-total' , productTotal);
     }
     if (productId == 'economy-input') {
         productTotal = productNewNumber * 100;
+        setDisplay(productId, 'confirm-economy-quantity');
+        calculationDisplay('confirm-economy-total',productTotal);
     }
     subTotal();
 }
@@ -50,4 +53,30 @@ function vat10(vat) {
 function total(subtotal, vat) {
     var totalPrice = subtotal + vat;
     document.getElementById('total').innerText = totalPrice;
+    calculationDisplay('confirm-subtotal' , subtotal);
+    calculationDisplay('confirm-vat' , vat);
+    calculationDisplay('confirm-total' , totalPrice);
 }
+
+
+
+/* Output Showing */
+function setDisplay(id, setValue) {
+    document.getElementById(setValue).innerText = document.getElementById(id).value;
+}
+function calculationDisplay(id , value){
+    document.getElementById(id).innerText = '$'+value;
+}
+function Display() {
+    document.getElementById('front-display').style.display = 'none';
+    document.getElementById('confirm-msg').style.display = 'block';
+
+    setDisplay('fly-from', 'confirm-fly-from');
+    setDisplay('fly-to', 'confirm-fly-to');
+    setDisplay('departure-date', 'confirm-departure-date');
+    setDisplay('return-date', 'confirm-return-date');
+
+    const firstClassQuantity = document.getElementById('first-class').value;
+    const economyQuantity = document.getElementById('economy-input');
+}
+document.getElementById('book-now-btn').addEventListener('click', Display);

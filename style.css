@@ -107,6 +107,7 @@ nav ul li a:hover, a.active{
 }
 
 .btn-style{
+    cursor: pointer;
     display: block;
     width: 100%;
     padding: 10px;
@@ -115,6 +116,9 @@ nav ul li a:hover, a.active{
     color: #fff;
     font-weight: 500;
     background-color:  #3352F2;
+}
+.btn-style:hover{
+    background-color:  rgb(25, 40, 117);
 }
 .amount{
     display: flex;
@@ -126,4 +130,30 @@ nav ul li a:hover, a.active{
     background-color: transparent;
     color: #3352F2;
     cursor: pointer;
+}
+#confirm-msg{
+    display: none;
+    width: 50%;
+    margin: 15em auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 5px;
+}
+.details{
+    margin: 1em 0;
+}
+#confirm-msg h2{
+    text-align: center;
+    color: #3352F2;
+}
+#confirm-msg h3{
+    text-align: center;
+    color: rgb(3, 9, 31);
+}
+#confirm-msg h4{
+    color: rgb(20, 46, 175);
+}
+#confirm-msg p{
+    color: rgb(32, 32, 32);
 }
