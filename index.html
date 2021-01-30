@@ -33,27 +33,27 @@
                     <h3>Booking Flights</h3>
                     <div class="input-group">
                         <label for="">Flying From</label>
-                        <input id="fly-from" class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh" required>
+                        <input id="fly-from" class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
                     </div>
                     <div class="input-group">
                         <label for="">Flying To</label>
-                        <input id="fly-to" class="inp-style" type="text" name="" placeholder="New York, United States" required>
+                        <input id="fly-to" class="inp-style" type="text" name="" placeholder="New York, United States">
                     </div>
                     <div class="inputs">
                         <div class="input-group">
                             <label" for="">Departure</label>
-                                <input id="departure-date" class="inp-style" type="date" name="" required>
+                                <input id="departure-date" class="inp-style" type="date" name="">
                         </div>
                         <div class="input-group">
                             <label for="">Return</label>
-                            <input id="return-date" class="inp-style" type="date" name="" required>
+                            <input id="return-date" class="inp-style" type="date" name="">
                         </div>
                     </div>
                     <div class="input-group f-class">
                         <div>
                             <label for="">First Class ($150)</label>
                             <input onchange="handleProductChange('first-class',true)" id="first-class"
-                                class="inp-style inp-width" type="text" name="" value="0" required>
+                                class="inp-style inp-width" type="text" name="" value="0">
                         </div>
                         <div class="plus-minus-btn">
                             <p>
@@ -68,7 +68,7 @@
                         <div>
                             <label for="">Economy ($100)</label>
                             <input onchange="handleProductChange('first-class',true)" id="economy-input"
-                                class="inp-style inp-width" type="text" name="" value="0" required>
+                                class="inp-style inp-width" type="text" name="" value="0">
                         </div>
                         <div class="plus-minus-btn">
                             <p>
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                     </div>
-                    <button id="book-now-btn" class="btn-style">Book Now</button>
+                    <button id="book-now-btn" class="btn-style" type="submit">Book Now</button>
                 </div>
             </section>
             <section>
@@ -138,7 +138,8 @@
                     <h4>Total Price With 10% Vat</h4>
                     <p><span>Subtotal : </span><span id="confirm-subtotal"></span></p>
                     <p><span>VAT 10% : </span><span id="confirm-vat"></span></p>
-                    <p><span>Total : </span><span id="confirm-total"></span></p>
+                    <hr>
+                    <p><b>Total : </b><span id="confirm-total"></span></p>
                 </div>
                 <h3>Thank You!</h3>
             </div>
