@@ -70,6 +70,8 @@ function checkCondition(id) {
     }
 }
 
+
+
 /* Output Showing */
 function setDisplay(id, setValue) {
     document.getElementById(setValue).innerText = document.getElementById(id).value;
@@ -85,6 +87,7 @@ function Display() {
         alert('Please Fill The All Info');
     }
     else {
+        alert('You Booking is Success');
         document.getElementById('front-display').style.display = 'none';
         document.getElementById('confirm-msg').style.display = 'block';
 

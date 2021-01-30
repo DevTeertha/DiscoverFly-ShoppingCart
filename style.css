@@ -12,6 +12,7 @@ body{
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    height: 100vh;
 }
 
 nav{
@@ -131,14 +132,23 @@ nav ul li a:hover, a.active{
     color: #3352F2;
     cursor: pointer;
 }
+
 #confirm-msg{
     display: none;
     width: 50%;
-    margin: 15em auto;
+    margin: 0 auto;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 25px;
     border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
 }
 .details{
     margin: 1em 0;
